@@ -1,0 +1,127 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173263940-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-173263940-2');
+    </script>
+    <style>
+        body{
+            margin:0;
+        }
+    </style>
+    <!--Title is auto-filled-->
+    <title>
+The USRC blog
+    </title>
+</head>
+
+<body>
+    <header style="position:sticky; display:flex; background-color:black;color:white; padding: 10px">
+        <img src="assets/logo.png" style="height: 2em">
+        <span style="flex: 0 0 200px; margin: auto;padding-left: 10px;">USRC blog</span>
+        <span style="flex: 0 1 100%"></span>
+        <img src="assets/burger.png" style="height: 2em" onclick="var s=document.querySelector('sidebar');s.style.display=s.style.display=='none'?'block':'none'">
+    </header>
+    <style>
+        sidebar a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <sidebar style="
+    display: none;
+    position: absolute;
+    top: calc(20px + 2em);
+    background: rgba(0,0,0,0.5);
+    height: calc(100% - (20px + 2em));
+    width: 100%;
+    ">
+    <div style="background:black; position:absolute; right:0; width:300px; padding: 10px; color: white; height:calc(100% - 20px);">
+        <!-- populate TOC here --> 
+<p><a href='/sensors'>A list of Robotics sensors</a></p>
+<p><a href='/meta'>Robotics FAQ</a></p>
+<p><a href=''>The USRC blog</a></p>
+<p><a href='/meta/state-of-industry'>The state of the robotics industry</a></p>
+<p><a href='/meta/statement-of-purpose'>USRC: Statement of purpose</a></p>
+        <!-- end populate TOC  --> 
+    </div>
+    </sidebar>
+    <script>
+        if (window.location.href.includes("?fbclid")) {
+            //strip FBCLIDs for better analytics
+            window.location.href = window.location.href.split("?")[0];
+        }
+    </script>
+    <script>
+        let md = /*insert markdown content here*/`
+# The USRC blog
+Hey there! Welcome to the USRC blog!
+
+You've probably seen lots of blogs before, but you might not really follow them, because who has time to read blogs these days? At USRC, we saw this as a problem, and wanted to change how we run things a little.
+
+The thesis: We want to make a blog that you want to read. Normally, blogs are constructed as linear in time but otherwise difficult to navigate (perhaps with the odd blog tag). Sure, that's how blogs are written, but leaving them that way makes it hard for you as a reader to read about what _you_ want.  
+
+The solution: We'll structure this blog as a file structure. There'll still be a stream if you _want_ to read the blog in a semblance of order, but this base will also serve as reference hub for our members as much as a regularly updated blog.
+
+So please come back. We'll promise to keep things fresh and organised, so you can stay up to date and still find things when you need them.
+
+Happy tronning!
+
+USRC 2020
+
+## Index
+- [Robotics FAQ](meta/index)
+    - [USRC's purpose](meta/statement-of-purpose)
+    - [State of the industry](meta/state-of-industry)
+    - Robotics facilities on campus
+- [A comprehensive-ish list of sensors out there](sensors)
+    - Camera sensors
+    - Ranging
+- Actuation
+    - Lights and displays
+    - Electromechanical actuators
+        - DC motor
+        - Servos
+        - Stepper motors
+        - Linear actuators
+    - Hydraulics
+- Control and software
+    - Programming 101
+    - Closed loop control
+    - AI and ML
+- Communication
+    - Physical link layer
+        - Wireless field guide
+        - Run a wire
+    - Software layer
+- Systems and simulation
+    - ROS
+    - Gazebo
+- Fabrication
+    - laser cutter
+    - 3d printer
+    - soldering
+    - welding
+    - other manufacturing methods
+- Robots we like
+    - USRC-1: The workshop bots
+
+        `;
+        showdown.setOption('openLinksInNewWindow', 'true');
+        var converter = new showdown.Converter();
+        let html = converter.makeHtml(md);
+        let wrap = document.createElement("div");
+        wrap.style.padding="5px";
+        wrap.innerHTML = html;
+        document.body.append(wrap);
+    </script>
+</body>
+
+</html>

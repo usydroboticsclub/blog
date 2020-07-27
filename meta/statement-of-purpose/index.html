@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173263940-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-173263940-2');
+    </script>
+    <style>
+        body{
+            margin:0;
+        }
+    </style>
+    <!--Title is auto-filled-->
+    <title>
+USRC: Statement of purpose
+    </title>
+</head>
+
+<body>
+    <header style="position:sticky; display:flex; background-color:black;color:white; padding: 10px">
+        <img src="assets/logo.png" style="height: 2em">
+        <span style="flex: 0 0 200px; margin: auto;padding-left: 10px;">USRC blog</span>
+        <span style="flex: 0 1 100%"></span>
+        <img src="assets/burger.png" style="height: 2em" onclick="var s=document.querySelector('sidebar');s.style.display=s.style.display=='none'?'block':'none'">
+    </header>
+    <style>
+        sidebar a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <sidebar style="
+    display: none;
+    position: absolute;
+    top: calc(20px + 2em);
+    background: rgba(0,0,0,0.5);
+    height: calc(100% - (20px + 2em));
+    width: 100%;
+    ">
+    <div style="background:black; position:absolute; right:0; width:300px; padding: 10px; color: white; height:calc(100% - 20px);">
+        <!-- populate TOC here --> 
+<p><a href='/sensors'>A list of Robotics sensors</a></p>
+<p><a href='/meta'>Robotics FAQ</a></p>
+<p><a href=''>The USRC blog</a></p>
+<p><a href='/meta/state-of-industry'>The state of the robotics industry</a></p>
+<p><a href='/meta/statement-of-purpose'>USRC: Statement of purpose</a></p>
+        <!-- end populate TOC  --> 
+    </div>
+    </sidebar>
+    <script>
+        if (window.location.href.includes("?fbclid")) {
+            //strip FBCLIDs for better analytics
+            window.location.href = window.location.href.split("?")[0];
+        }
+    </script>
+    <script>
+        let md = /*insert markdown content here*/`
+# USRC: Statement of purpose
+## A bit of context
+When USRC started in 2017, robotics was in season. There were robotics comps aplenty, like the robot art competition, DRC, NiARC.
+In the coming years, however, AI and machine learning became the new big thing. Suddenly, company robotics sponsorships nosedived. NiARC and Robotart both disappeared. 
+
+![A google trends graph of where it went wrong](../assets/bot_ml_problem.png)
+
+USRC was originally created to help students access robotics competitions, but suddenly there were none.
+
+What's worse, although we were the USYD Robotics club, we weren't the only people offering robotics related things in the university. Indeed, we were competing against:
+- SUMO: the Sydney University Mechatronics Organisation, who put themselves in charge of the careers-y side of mechatronics;
+- The actual mechatronics degree, which technically taught people how to become robotics engineers, and had the resources to offer most students hands-on robotics experience.
+
+So if we had no competitions to run, and the uni was already providing hands on robotics courses, and there was a huge deluge of robotics related youtube videos out there, what could we do?
+
+## USRC's strengths
+That's not to say we didn't have any opportunities at all. To date, USRC does have:
+- A sizeable inventory (when we have access to it...), including:
+    - Depth-sensing cameras
+    - A lot of arduinos, motors and wheels (from our workshops)
+- The freedom to choose our approach (Engineers Australia isn't going to wave a stick at us if we don't provide a legitimate mechatronics engineering course on our first try).
+- The USRC name. We belong to one of the G5 universities in Australia. That's a huge boost to our marketing :D
+
+## Our purpose
+Our original mission of helping USYD students access robotics competitions seems rather hard to reach right now. We do however still seek to help USYD students gain hands-on access to robotics, whether through competitions or otherwise. 
+
+As a club, we also want to cultivate a sense of community.
+
+## How we'll do this
+We will help USYD students access robotics by:
+- Providing a learning pathway that students can access at their own pace, including providing physical parts or their alternatives, through our blog
+- Keep looking for robotics competitions and sponsors to help our students get external robotics accreditations.
+
+        `;
+        showdown.setOption('openLinksInNewWindow', 'true');
+        var converter = new showdown.Converter();
+        let html = converter.makeHtml(md);
+        let wrap = document.createElement("div");
+        wrap.style.padding="5px";
+        wrap.innerHTML = html;
+        document.body.append(wrap);
+    </script>
+</body>
+
+</html>

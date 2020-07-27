@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/showdown/dist/showdown.min.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173263940-2"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-173263940-2');
+    </script>
+    <style>
+        body{
+            margin:0;
+        }
+    </style>
+    <!--Title is auto-filled-->
+    <title>
+A list of Robotics sensors
+    </title>
+</head>
+
+<body>
+    <header style="position:sticky; display:flex; background-color:black;color:white; padding: 10px">
+        <img src="assets/logo.png" style="height: 2em">
+        <span style="flex: 0 0 200px; margin: auto;padding-left: 10px;">USRC blog</span>
+        <span style="flex: 0 1 100%"></span>
+        <img src="assets/burger.png" style="height: 2em" onclick="var s=document.querySelector('sidebar');s.style.display=s.style.display=='none'?'block':'none'">
+    </header>
+    <style>
+        sidebar a{
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+    <sidebar style="
+    display: none;
+    position: absolute;
+    top: calc(20px + 2em);
+    background: rgba(0,0,0,0.5);
+    height: calc(100% - (20px + 2em));
+    width: 100%;
+    ">
+    <div style="background:black; position:absolute; right:0; width:300px; padding: 10px; color: white; height:calc(100% - 20px);">
+        <!-- populate TOC here --> 
+<p><a href='/sensors'>A list of Robotics sensors</a></p>
+<p><a href='/meta'>Robotics FAQ</a></p>
+<p><a href=''>The USRC blog</a></p>
+<p><a href='/meta/state-of-industry'>The state of the robotics industry</a></p>
+<p><a href='/meta/statement-of-purpose'>USRC: Statement of purpose</a></p>
+        <!-- end populate TOC  --> 
+    </div>
+    </sidebar>
+    <script>
+        if (window.location.href.includes("?fbclid")) {
+            //strip FBCLIDs for better analytics
+            window.location.href = window.location.href.split("?")[0];
+        }
+    </script>
+    <script>
+        let md = /*insert markdown content here*/`
+# A list of Robotics sensors
+Sorted roughly by how often you'll see them being used in robotics.
+
+
+## GPS
+- GPS stands for Global Positioning Satellite, but is not limited to the American GPS system.
+    - Other GPS systems exist and are sometimes used in robotics, including GLONASS (Russian), QZSS(Japan), and Beidou (Chinese).
+- GPS sensors provide positional information.
+- The setup of a GPS sensor has an effect on its accuracy.
+    - GPS sensors for boats often have a pair of antennae separated by around 2 metres, to obtain two sets of timings for better accuracy.
+- The environment of a GPS sensor has an effect on its accuracy.
+    - When there are tall metal buildings in a line (think New york, Tokyo or Sydney CBD), GPS signals can bounce off the buildings, creating echos that make it particularly difficult to get an accurate reading.
+## Camera
+- Subsets include stereo cameras and single wire FPV cameras.
+## Motor encoders
+
+## Lidar and radar
+
+## Sensors that aren't particularly useful
+Don't worry too much about memorising this list. As long as you're comfortable with using analogue measurements or I2C and reading datasheets, you'll be right.
+- Human interface sensors
+    - Capacitive touch sensors
+- Specific analogue environment sensors
+    - Temperature sensors
+    - Hall effect sensors
+- Reed switches
+
+        `;
+        showdown.setOption('openLinksInNewWindow', 'true');
+        var converter = new showdown.Converter();
+        let html = converter.makeHtml(md);
+        let wrap = document.createElement("div");
+        wrap.style.padding="5px";
+        wrap.innerHTML = html;
+        document.body.append(wrap);
+    </script>
+</body>
+
+</html>
