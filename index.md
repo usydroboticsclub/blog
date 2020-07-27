@@ -14,9 +14,10 @@ Happy tronning!
 USRC 2020
 
 ## Index
-- [Robotics FAQ](meta/index)
+- [Robotics FAQ](meta)
     - [USRC's purpose](meta/statement-of-purpose)
     - [State of the industry](meta/state-of-industry)
+    - [Getting started with USRC](meta/getting-started)
     - Robotics facilities on campus
 - [A comprehensive-ish list of sensors out there](sensors)
     - Camera sensors
@@ -47,5 +48,6 @@ USRC 2020
     - soldering
     - welding
     - other manufacturing methods
-- Robots we like
+- [Robots we've made](gallery)
     - USRC-1: The workshop bots
+    - Self-Zooming car: A self-driving (toy) car
