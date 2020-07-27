@@ -3,7 +3,7 @@
 When USRC started in 2017, robotics was in season. There were robotics comps aplenty, like the robot art competition, DRC, NiARC.
 In the coming years, however, AI and machine learning became the new big thing. Suddenly, company robotics sponsorships nosedived. NiARC and Robotart both disappeared. 
 
-![A google trends graph of where it went wrong](../assets/bot_ml_problem.png)
+![A google trends graph of where it went wrong](bot_ml_problem.png)
 
 USRC was originally created to help students access robotics competitions, but suddenly there were none.
 

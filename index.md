@@ -25,7 +25,7 @@ USRC 2020
     - Lights and displays
     - Electromechanical actuators
         - DC motor
-        - Servos
+        - [Servos](actuation/electromech/servos)
         - Stepper motors
         - Linear actuators
     - Hydraulics
