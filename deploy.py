@@ -1,6 +1,7 @@
 ## More people probably have python on their system so I will use python.
 import os 
 import shutil
+import subprocess
 
 ## Remove all html files and track all md files except for the template
 whitelist_htmls = ["per_page_template.html"]
@@ -63,7 +64,22 @@ for m in md_files:
     mdfile=open(m)
     mdlines = mdfile.readlines()
     mdfile.close()
-
+    
+    contribs = (subprocess.check_output(['git', 'log','--follow','--name-only',m[2:]])).decode('ascii')
+    contribs = contribs.split("\n")
+    if (len(contribs)<2):
+        print("Warning: File {} has not been git committed. Please git commit your file so we can credit you :)".format(m))
+    else:
+        last_update_time=contribs[2][5:].strip()
+        
+        contribs = filter(lambda i: i[:7]=="Author:",contribs)
+        contrib_dict={}
+        for c in contribs:
+            contrib_dict[c[7:].split("<")[0]]=True
+        contrib_list= list(contrib_dict.keys())
+        
+        mdlines.insert(1,"Last updated:" + last_update_time+"\n")
+        mdlines.insert(2,"Contributors:" + ",".join(contrib_list)+"\n")
     htmlfile = open(htmlpath)
     htmllines=htmlfile.readlines()
     htmlfile.close()
