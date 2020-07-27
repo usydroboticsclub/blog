@@ -78,8 +78,8 @@ for m in md_files:
             contrib_dict[c[7:].split("<")[0]]=True
         contrib_list= list(contrib_dict.keys())
         
-        mdlines.insert(1,"Last updated:" + last_update_time+"\n")
-        mdlines.insert(2,"Contributors:" + ",".join(contrib_list)+"\n")
+        mdlines.insert(1,"Last updated:" + last_update_time+"\n\n")
+        mdlines.insert(2,"Contributors:" + ",".join(contrib_list)+"\n\n")
     htmlfile = open(htmlpath)
     htmllines=htmlfile.readlines()
     htmlfile.close()
