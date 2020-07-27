@@ -17,7 +17,7 @@ USRC 2020
 - [Robotics FAQ](meta)
     - [USRC's purpose](meta/statement-of-purpose)
     - [State of the industry](meta/state-of-industry)
-    - [Getting started with USRC](meta/getting-started)
+    - Getting started with USRC (see FAQ)
     - Robotics facilities on campus
 - [A comprehensive-ish list of sensors out there](sensors)
     - Camera sensors
