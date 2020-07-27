@@ -21,7 +21,7 @@ USRC 2020
 - [A comprehensive-ish list of sensors out there](sensors)
     - Camera sensors
     - Ranging
-- Actuation
+- [Actuation](actuation)
     - Lights and displays
     - Electromechanical actuators
         - DC motor

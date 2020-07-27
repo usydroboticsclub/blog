@@ -27,7 +27,7 @@ for m in md_files:
     mdlines = mdfile.readlines()
     md_paths.append((mdlines[0][1:].strip()+"\n",basepath))
     mdfile.close()
-md_paths=sorted(md_paths)
+md_paths=sorted(md_paths,key=lambda i: i[1])
 
 pptfile=open("per_page_template.html")
 pptlines=pptfile.readlines()
@@ -40,7 +40,7 @@ for l in pptlines:
         to_remove=True
         final_lines.append(l)
         for m in md_paths:
-            final_lines.append("<p><a href='{}'>{}</a></p>\n".format(m[1][1:], m[0].rstrip()))
+            final_lines.append("<p><a href='{}' style='padding-left: {}px'>{}</a></p>\n".format(m[1][1:], m[1].count("/")*5,m[0].rstrip()))
     elif "end populate TOC" in l: 
         to_remove=False
         final_lines.append(l)
