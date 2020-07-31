@@ -14,15 +14,15 @@ Happy tronning!
 USRC 2020
 
 ## Index
-- [Robotics FAQ](meta)
+- Robotics FAQ <!--[Robotics FAQ](meta)-->
     - [USRC's purpose](meta/statement-of-purpose)
-    - [State of the industry](meta/state-of-industry)
+    - State of the Robotics Industry<!--[State of the industry](meta/state-of-industry)-->
     - Getting started with USRC (see FAQ)
     - Robotics facilities on campus
-- [A comprehensive-ish list of sensors out there](sensors)
+- A comprehensive-ish list of sensors out there <!--[A comprehensive-ish list of sensors out there](sensors)-->
     - Camera sensors
     - Ranging
-- [Actuation](actuation)
+- Actuation <!--[Actuation](actuation)-->
     - Lights and displays
     - Electromechanical actuators
         - DC motor
