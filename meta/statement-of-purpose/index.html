@@ -5,17 +5,17 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173263940-2"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-    gtag('config', 'UA-173263940-2');
+        gtag('config', 'UA-173263940-2');
     </script>
     <link rel="icon" href="/assets/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
     <style>
-        body{
-            margin:0;
+        body {
+            margin: 0;
             font-family: 'Roboto', sans-serif;
         }
     </style>
@@ -30,15 +30,27 @@ USRC: Statement of purpose
         <img src="/assets/logo.png" style="height: 2em">
         <span style="flex: 0 0 200px; margin: auto;padding-left: 10px;">USRC blog</span>
         <span style="flex: 0 1 100%"></span>
-        <img src="/assets/burger.png" style="height: 2em" onclick="var s=document.querySelector('sidebar');s.style.display=s.style.display=='none'?'block':'none'">
+        <img src="/assets/burger.png" style="height: 2em"
+            onclick="var s=document.querySelector('sidebar');s.style.display=s.style.display=='none'?'block':'none'">
     </header>
     <style>
-        sidebar a{
+        sidebar a {
             color: white;
             text-decoration: none;
         }
-        img{
+
+        img {
             max-width: 100%;
+        }
+
+        .main_body {
+            padding: 0 33vw;
+        }
+
+        @media screen and (max-aspect-ratio:5/4) {
+            .main_body {
+                padding: 5vw;
+            }
         }
     </style>
     <sidebar style="
@@ -49,8 +61,9 @@ USRC: Statement of purpose
     height: calc(100% - (20px + 2em));
     width: 100%;
     ">
-    <div style="background:black; position:absolute; right:0; width:300px; padding: 10px; color: white; height:calc(100% - 20px);">
-        <!-- populate TOC here (this is an automatic process) --> 
+        <div
+            style="background:black; position:absolute; right:0; width:300px; padding: 10px; color: white; height:calc(100% - 20px);">
+            <!-- populate TOC here (this is an automatic process) -->
 <p><a href='' style='padding-left: 0px'>The USRC blog</a></p>
 <p><a href='/actuation' style='padding-left: 5px'>Actuation</a></p>
 <p><a href='/actuation/electromech/servos' style='padding-left: 15px'>Servos</a></p>
@@ -59,8 +72,8 @@ USRC: Statement of purpose
 <p><a href='/meta/state-of-industry' style='padding-left: 10px'>The state of the robotics industry</a></p>
 <p><a href='/meta/statement-of-purpose' style='padding-left: 10px'>USRC: Statement of purpose</a></p>
 <p><a href='/sensors' style='padding-left: 5px'>A list of Robotics sensors</a></p>
-        <!-- end populate TOC  --> 
-    </div>
+            <!-- end populate TOC  -->
+        </div>
     </sidebar>
     <script>
         if (window.location.href.includes("?fbclid")) {
@@ -71,7 +84,7 @@ USRC: Statement of purpose
     <script>
         let md = /*insert markdown content here*/`
 # USRC: Statement of purpose
-Last updated:Mon Jul 27 14:49:59 2020 +1000
+Last updated:Fri Jul 31 18:45:21 2020 +1000
 
 Contributors: Steven Liu 
 
@@ -114,7 +127,7 @@ Got any suggestions for us? Do let us know -- slide into our DM's on [Facebook](
         var converter = new showdown.Converter();
         let html = converter.makeHtml(md);
         let wrap = document.createElement("div");
-        wrap.style.padding="5px";
+        wrap.classList.add("main_body");
         wrap.innerHTML = html;
         document.body.append(wrap);
     </script>
