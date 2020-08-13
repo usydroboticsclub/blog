@@ -46,6 +46,7 @@ USRC 2020
     - laser cutter
     - 3d printer
     - soldering
+    - [PCB nanufacturing](fabrication/PCB)
     - welding
     - other manufacturing methods
 - [Robots we've made](gallery)
