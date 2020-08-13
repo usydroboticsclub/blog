@@ -21,7 +21,7 @@
     </style>
     <!--Title is auto-filled-->
     <title>
-Robots we've made
+Making PCBs
     </title>
 </head>
 
@@ -84,22 +84,25 @@ Robots we've made
     </script>
     <script>
         let md = /*insert markdown content here*/`
-# Robots we've made
-Last updated:Mon Jul 27 15:29:08 2020 +1000
+# Making PCBs
+Imagine you're working on a robot which needs a GPS sensor. So far, you know how to use a breadboard, and perhaps you've used prototyping boards before, so you know how to solder through hole components.
 
-Contributors: Steven Liu 
+But when you go to purchase your part, you find that they don't have a through hole GPS sensor! This is typically true of anything more complicated than performing a single logical function and is not particularly cheap: for example, you probably won't find through hole versions of GPS sensors, and (a bunch of stuff that I don't actually know haha).
 
-## USRC-1: The workshop bot
+Instead, you have surface mount components. Surface mount components don't have legs; instead they are plopped straight onto the surface of a pcb (hence the name). Not only are surface mount components smaller and more fiddly to solder, there's also no standard prototyping board / breadboard that you can  use to put them together. Instead, you have to manufacture a PCB (printed circuit board).
 
-![The small USRC bots.](usrc-1.jpg)
 
-The USRC bot comes with two motorised wheels, a rolling ball third wheel, an arduino, a motor driver, and a bluetooth module. (All the parts are available to borrow, just come on up to the tron lab and you can have a play.)
+## PCB design tools
+There are plenty of expensive PCB design tools out there, but the open source version is called KiCAD, and can be downloaded here: https://kicad-pcb.org/
 
-The USRC bot can be controlled via a bluetooth phone app. It's designed to be really accessible to beginners, but if you know what you're doing then you might want to try the next tier up...
+I've also found this series on KiCAD especially helpful as a use guide: https://www.youtube.com/watch?v=vaCVh2SAZY4
+Although some of the icons are a little out of date, with a little patience I found it incredibly useful.
 
-## Self Zooming Car
-![A self-driving car.](selfzooming.jpg)
-The Self-Zooming Car includes a stereo camera, rechargeable battery, intel compute board, wifi, a brushless ESC driven motor, and a steering servo. It can drive itself between blue and yellow masking tape laid out on the floor.
+Surface mount components are somewhat more difficult to solder as well, and I found these videos useful in explaining:
+- How to solder surface mount: https://www.youtube.com/watch?v=VxMV6wGS3NY
+- What the random ground pads under some more complex components are for: https://forums.parallax.com/discussion/157200/practical-home-method-to-solder-smd-with-ground-pad-below
+- How to use vias to solder thermal pads https://www.youtube.com/watch?v=588iV07nEdM&t=715s
+
 
 
         `;
