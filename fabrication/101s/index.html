@@ -21,7 +21,7 @@
     </style>
     <!--Title is auto-filled-->
     <title>
-Servos
+Engineering 101s
     </title>
 </head>
 
@@ -87,43 +87,19 @@ Servos
     </script>
     <script>
         let md = /*insert markdown content here*/`
-# Servos
-Last updated:Mon Jul 27 14:49:59 2020 +1000
-
-Contributors: Steven Liu 
-
-Servos are a particular type of motor built for small, rapid, controlled movements.
-
-A typical servo looks like a box with a little shaft coming out:
-
-![A standard servo](standard-servo.jpg)
-
-There are typically four holes for mounting (two behind and two in front); and three wires coming out.
-
-You may also see a cross / line shaped structure sitting on top of the servo. That structure is called a servo horn; and most of the time it is removable / interchangeable.
-
-## Where to use servos
-- Servos are small, but because of this they're typically less powerful than larger motors.
-### Choosing the right servo
-There are a number of different servos on the market. To choose one that is right for your application, here are some things to look out for:
-- Torque: Torque is the amount of radial force a servo can exert. Higher torque is typically bettter.
-- Speed: Some high torque motors may trade torque with speed; but if you need a quick response from your servo they might not be the right fit for you.
-- Size: Servos come in a few standard sizes, but as with all parts, it's good to buy the part before you fabricate, or you might find that your servo doesn't fit in the mount you've made for it.
-### Continuous rotation servos
-- Although most servos translate the input signal to an angular position, some servos transform it into a set speed. Despite not being able to hold position, these servos do have the added bonus of more than 180 degrees of motion.
-- You can in fact turn any normal servo into a contiuous rotation servo, if you're feeling up to it! Here's a link: https://www.youtube.com/watch?v=zZGkkzMBL28
-## How to use servos
-1. Purchase the servo.
-2. Make measurements with calipers so that you can design your robot around the servo for your mount. Don't forget a space for the wire!
-3. Choose a servo horn and make measurements with calipers. Design your arm around the servo horn. (Don't forget to take into account the vertical offset! You  might be able to fit a whole 3mm ply sheet in between!)
-4. Wire up the servo. You can attach the black and red to a ground/power rail and have the yellow PWM wire connected to an arduino or other output pin.
-5. Write code. Depending on what plaform you're using, this might be as simple as using a library (Arduino), or using a timer output compare (if you're going reallly low level).
-6. Calibrate the servo. Using a protractor, set the servo to a variety of angles in software, and see what they come out to be in hardware. If you're not in a rush, you can do individual points, but a linear approximation is often good enough.
-7. You're off!
-### Protips
-- Calibrate them! Not all servos are perfect, but fortunately you can adjust it in software.
-- Make sure they have enough current.
-- You may need a servo controller if you're controlling multiple servos at once.
+# Engineering 101s
+When I started as an engineer stepping into a workshop, I heard lots of words thrown around with no idea what they meant. Here's what I eventually found out:
+1. Nut and bolt sizes: Contrary to what you may have been taught by LEGO or any of those construction kit toys as a child, it turns out that you can't use the same diameter nut and bolt for every application.
+    - There are metric bolts and Imperial bolts. There are also metric and imperial hex keys / allan keys corresponding to these bolts.
+        - The Metric bolt system goes by M#, where # is the diameter of the bolt in mm. For example, M2 means a 2mm bolt, M2.5 means a 2.5mm bolt.
+            - Note that the diameter is the TAP HOLE diameter - there's a difference!
+    - Bolts can vary in a number of different ways.
+        - A bolt has a head (the top bit), which can come in different types: flat head, phillips head, hex head.
+        - The bolt has a thread.
+    - When using bolts, there are two holes:
+        - The tap hole: This is the diameter of a hole which needs to be threaded to fit a bolt through. 
+        - The through hole: This is the diameter of a hole which a threaded bolt will comfortably fit through into. This is typically slightly bigger than
+        - Here's a handy chart: https://www.trfastenings.com/Products/knowledgebase/Tables-Standards-Terminology/Tapping-Sizes-and-Clearance-Holes
 
         `;
         showdown.setOption('openLinksInNewWindow', 'true');

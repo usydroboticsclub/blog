@@ -21,7 +21,7 @@
     </style>
     <!--Title is auto-filled-->
     <title>
-Servos
+Getting started with USRC
     </title>
 </head>
 
@@ -87,43 +87,59 @@ Servos
     </script>
     <script>
         let md = /*insert markdown content here*/`
-# Servos
-Last updated:Mon Jul 27 14:49:59 2020 +1000
+# Getting started with USRC
+## About you
+- It's ok if you don't know how to code or don't know the first thing about robotics, but you just want in. That's why we're here. 
+## Terms of engagement
+- The answer to "How much time will I need to spend on this every week" is: We will not monitor your commitment, but we will not monitor your commitment. 
+- For each of our activities, there is a rough estimate of how much time it will take. It's up to you to set your level of commitment. 
+## The main program
+1. Join our group. This means, head to [discord, where we hang out.](https://discord.gg/JmpUX7G)
+### Semester 1
+2. Take our online tutorials (total time 5-10 hours, so half a semester's worth)
+    - Learn to use `git`, a version management system that will be useful any time you work on code: https://github.com/usydroboticsclub/intro (Estimated time: 1-2hr)
+    - Learn `python`, an accessible but powerful programming language: https://github.com/usydroboticsclub/python and https://github.com/usydroboticsclub/py_harder (estimated time: 4hr = 2x2hr)
+    - Learn `opencv`, a toolkit for working with images and camera feeds: https://github.com/usydroboticsclub/intro-to-opencv (estimated time: 2-3hr)
+3. Build a mini arduino-bluetooth robot with us. (2-4 hours)
 
-Contributors: Steven Liu 
+### Semester 2
+Welcome to second year! You will have done enough tron to know what you're doing most of the time.
+5. Take more online tutorials. 
+    - Get familiar with Linux. 
+    - Learn `ROS`, the robot operating system with us: https://github.com/usydroboticsclub/ROS
 
-Servos are a particular type of motor built for small, rapid, controlled movements.
+-- Gazebo arm robot purely in sim?
+-- http://gazebosim.org/blog/feature_breakable
+-- http://gazebosim.org/tutorials?tut=gui_overlay&cat=user_input#Example1:Spawnspheres
 
-A typical servo looks like a box with a little shaft coming out:
+-- Making PCB / 3d printing?
 
-![A standard servo](standard-servo.jpg)
+-- ROS swarm laser tag? / robot swarm?
 
-There are typically four holes for mounting (two behind and two in front); and three wires coming out.
+-- actual robot arm?
 
-You may also see a cross / line shaped structure sitting on top of the servo. That structure is called a servo horn; and most of the time it is removable / interchangeable.
+-- reinforcement and machine learning?
 
-## Where to use servos
-- Servos are small, but because of this they're typically less powerful than larger motors.
-### Choosing the right servo
-There are a number of different servos on the market. To choose one that is right for your application, here are some things to look out for:
-- Torque: Torque is the amount of radial force a servo can exert. Higher torque is typically bettter.
-- Speed: Some high torque motors may trade torque with speed; but if you need a quick response from your servo they might not be the right fit for you.
-- Size: Servos come in a few standard sizes, but as with all parts, it's good to buy the part before you fabricate, or you might find that your servo doesn't fit in the mount you've made for it.
-### Continuous rotation servos
-- Although most servos translate the input signal to an angular position, some servos transform it into a set speed. Despite not being able to hold position, these servos do have the added bonus of more than 180 degrees of motion.
-- You can in fact turn any normal servo into a contiuous rotation servo, if you're feeling up to it! Here's a link: https://www.youtube.com/watch?v=zZGkkzMBL28
-## How to use servos
-1. Purchase the servo.
-2. Make measurements with calipers so that you can design your robot around the servo for your mount. Don't forget a space for the wire!
-3. Choose a servo horn and make measurements with calipers. Design your arm around the servo horn. (Don't forget to take into account the vertical offset! You  might be able to fit a whole 3mm ply sheet in between!)
-4. Wire up the servo. You can attach the black and red to a ground/power rail and have the yellow PWM wire connected to an arduino or other output pin.
-5. Write code. Depending on what plaform you're using, this might be as simple as using a library (Arduino), or using a timer output compare (if you're going reallly low level).
-6. Calibrate the servo. Using a protractor, set the servo to a variety of angles in software, and see what they come out to be in hardware. If you're not in a rush, you can do individual points, but a linear approximation is often good enough.
-7. You're off!
-### Protips
-- Calibrate them! Not all servos are perfect, but fortunately you can adjust it in software.
-- Make sure they have enough current.
-- You may need a servo controller if you're controlling multiple servos at once.
+-- SLAM system? (Phone AR)
+
+-- drones? aero + IMU + power + minification
+
+3. Build a self-driving car with us. (2-4 hours)
+    - The car will be a rechargeable, GPS-controlled car. 
+    - Theoretically this can be done in one afternoon, but it might take a bit longer.
+    - Reach out on Discord if you want to take part in this.
+
+### Semester 3
+4. Build a spiderbot with us. (2-4 hours)
+    - If you want, you can try and build your own reverse-kinematic engine as well.
+
+### Semester 4
+
+### Semester 5
+
+### Semester 6
+
+
 
         `;
         showdown.setOption('openLinksInNewWindow', 'true');
